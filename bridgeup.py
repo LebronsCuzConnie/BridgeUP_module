@@ -6,3 +6,8 @@
 import pandas as pd
 
 df = pd.read_csv("internship_bootcamp_data.csv")
+def student_color(name):
+	fav_color= df["Fav color"].loc[df["First Name"]== name]
+	return fav_color
+
+print(student_color("Mia"))
