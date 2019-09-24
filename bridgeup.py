@@ -6,3 +6,13 @@
 import pandas as pd
 
 df = pd.read_csv("internship_bootcamp_data.csv")
+
+#tells you how many people have the same fav animal as you
+def animal_num(animal):
+	an = df["Fav animal"]
+	c = 0
+	for i in an:
+		if i == animal:
+			c+=1
+	return c
+
