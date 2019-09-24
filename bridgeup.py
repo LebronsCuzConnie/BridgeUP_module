@@ -12,6 +12,18 @@ def color_num(color):
 	return counter
 
 
+df = pd.read_csv("internship_bootcamp_data.csv")
+
+# this function counts the amount of brown scholars in a certain grade. 
+def grade_num(num): 
+    grade = df["Grade"]
+    total = 0 
+    for i in grade: 
+        if i == num: 
+            total += 1 
+    return total
+
+
 #tells you how many people have the same fav animal as you
 def animal_num(animal):
 	an = df["Fav animal"]
@@ -23,8 +35,8 @@ def animal_num(animal):
 
 
 #Takes the name of student and returns their favorite ice cream flavor
-
 def student_flavor(Name):
 	Flavor = df["Fav ice cream flavor"].loc[df["First Name"] == Name]
 
 	return Flavor
+
