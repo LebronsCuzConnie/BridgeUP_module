@@ -11,6 +11,11 @@ def color_num(color):
 			counter += 1
 	return counter
 
+#This function takes a student's name and returns their favorite color
+def student_color(name):
+	fav_color= df["Fav color"].loc[df["First Name"]== name]
+	return fav_color
+
 # Creates function to get Cohort from Name
 def student_cohort(name):
 	first_name = df["First Name"]
@@ -39,3 +44,4 @@ def animal_num(animal):
 def student_flavor(Name):
 	Flavor = df["Fav ice cream flavor"].loc[df["First Name"] == Name]
 	return Flavor
+
