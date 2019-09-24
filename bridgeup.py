@@ -61,6 +61,7 @@ def student_season(name):
 	return season
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 df = pd.read_csv("internship_bootcamp_data.csv")
 def student_animal(name):
 	student = df["First Name"]
@@ -68,4 +69,12 @@ def student_animal(name):
 	fav_animal = animal.loc[student == name]
 	return fav_animal
 =======
+>>>>>>> upstream/master
+=======
+#this function returns the grade of a brown scholar when a name is inputted
+def student_grade(brown_scholar):
+    gr = df["Grade"].loc[df["First Name"]==brown_scholar]
+    return gr
+
+
 >>>>>>> upstream/master
