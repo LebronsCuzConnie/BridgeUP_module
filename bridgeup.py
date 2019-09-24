@@ -7,6 +7,7 @@ import pandas as pd
 
 df = pd.read_csv("internship_bootcamp_data.csv")
 
+
 #tells you how many people have the same fav animal as you
 def animal_num(animal):
 	an = df["Fav animal"]
@@ -15,4 +16,12 @@ def animal_num(animal):
 		if i == animal:
 			c+=1
 	return c
+
+
+#Takes the name of student and returns their favorite ice cream flavor
+
+def student_flavor(Name):
+	Flavor = df["Fav ice cream flavor"].loc[df["First Name"] == Name]
+
+	return Flavor
 
