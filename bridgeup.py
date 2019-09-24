@@ -45,8 +45,8 @@ def student_flavor(Name):
 	Flavor = df["Fav ice cream flavor"].loc[df["First Name"] == Name]
 	return Flavor
 
- #Loops throught the data in the file and looks for the ice cream flavor 
- #Gives you how many people has that flavor
+#Loops throught the data in the file and looks for the ice cream flavor 
+#Gives you how many people has that flavor
 def flavor_num(stu_fla):
 	flavor = df["Fav ice cream flavor"]
 	fla_re = 0
@@ -54,4 +54,9 @@ def flavor_num(stu_fla):
 		if i == stu_fla:
 			fla_re +=1
 	return fla_re
+
+#This function takes in a student name and returns their favorite season.
+def student_season(name):
+	season = df["Fav season"].loc[df["First Name"] == name]
+	return season
 
