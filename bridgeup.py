@@ -6,3 +6,12 @@
 import pandas as pd
 
 df = pd.read_csv("internship_bootcamp_data.csv")
+
+#returns # of students that like a specific season
+
+def season_num(season):
+	number = 0
+	for i in df["Fav season"]:
+		if i == season:
+ 			number += 1
+ 	return number
