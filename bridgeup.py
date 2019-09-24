@@ -46,6 +46,7 @@ def student_flavor(Name):
 	return Flavor
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 df = pd.read_csv("internship_bootcamp_data.csv")
 
 #Takes the name of student and returns their favorite ice cream flavor
@@ -60,4 +61,45 @@ def student_flavor (Name):
 
 
 =======
+>>>>>>> upstream/master
+=======
+#Loops throught the data in the file and looks for the ice cream flavor 
+#Gives you how many people has that flavor
+def flavor_num(stu_fla):
+	flavor = df["Fav ice cream flavor"]
+	fla_re = 0
+	for i in flavor:
+		if i == stu_fla:
+			fla_re +=1
+	return fla_re
+
+#This function takes in a student name and returns their favorite season.
+def student_season(name):
+	season = df["Fav season"].loc[df["First Name"] == name]
+	return season
+
+#take a student name and return their favorite animal
+def student_animal(name):
+	student = df["First Name"]
+	animal = df["Fav animal"]
+	fav_animal = animal.loc[student == name]
+	return fav_animal
+
+#this function returns the grade of a brown scholar when a name is inputted
+def student_grade(brown_scholar):
+    gr = df["Grade"].loc[df["First Name"]==brown_scholar]
+    return gr
+
+#returns # of students that like a specific season
+def season_num(season):
+	number = 0
+	for i in df["Fav season"]:
+		if i == season:
+ 			number += 1
+ 	return number
+
+#this function will take a students name and print out the students grade
+def grade(brownscholar):
+    gr = df["Grade"].loc[df["First Name"]==brownscholar]
+    return gr
 >>>>>>> upstream/master
