@@ -11,8 +11,11 @@ def color_num(color):
 			counter += 1
 	return counter
 
-
-df = pd.read_csv("internship_bootcamp_data.csv")
+# Creates function to get Cohort from Name
+def student_cohort(name):
+	first_name = df["First Name"]
+	cohort = df["Cohort"].loc[first_name == name] # USE BRACKETS W/ .LOC[]
+	return cohort
 
 # this function counts the amount of brown scholars in a certain grade. 
 def grade_num(num): 
@@ -23,7 +26,6 @@ def grade_num(num):
             total += 1 
     return total
 
-
 #tells you how many people have the same fav animal as you
 def animal_num(animal):
 	an = df["Fav animal"]
@@ -33,10 +35,7 @@ def animal_num(animal):
 			c+=1
 	return c
 
-
 #Takes the name of student and returns their favorite ice cream flavor
 def student_flavor(Name):
 	Flavor = df["Fav ice cream flavor"].loc[df["First Name"] == Name]
-
 	return Flavor
-
