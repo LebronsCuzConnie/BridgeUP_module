@@ -60,21 +60,27 @@ def student_season(name):
 	season = df["Fav season"].loc[df["First Name"] == name]
 	return season
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-df = pd.read_csv("internship_bootcamp_data.csv")
+#take a student name and return their favorite animal
 def student_animal(name):
 	student = df["First Name"]
 	animal = df["Fav animal"]
 	fav_animal = animal.loc[student == name]
 	return fav_animal
-=======
->>>>>>> upstream/master
-=======
+
 #this function returns the grade of a brown scholar when a name is inputted
 def student_grade(brown_scholar):
     gr = df["Grade"].loc[df["First Name"]==brown_scholar]
     return gr
 
+#returns # of students that like a specific season
+def season_num(season):
+	number = 0
+	for i in df["Fav season"]:
+		if i == season:
+ 			number += 1
+ 	return number
 
->>>>>>> upstream/master
+#this function will take a students name and print out the students grade
+def grade(brownscholar):
+    gr = df["Grade"].loc[df["First Name"]==brownscholar]
+    return gr
