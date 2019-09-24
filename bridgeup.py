@@ -60,3 +60,9 @@ def student_season(name):
 	season = df["Fav season"].loc[df["First Name"] == name]
 	return season
 
+#this function returns the grade of a brown scholar when a name is inputted
+def student_grade(brown_scholar):
+    gr = df["Grade"].loc[df["First Name"]==brown_scholar]
+    return gr
+
+
