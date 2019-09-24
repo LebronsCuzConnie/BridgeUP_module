@@ -6,3 +6,9 @@
 import pandas as pd
 
 df = pd.read_csv("internship_bootcamp_data.csv")
+df["Grade"]
+def grade(brown_scholar):
+    gr = df["Grade"].loc[df["First Name"]==brown_scholar]
+    return gr
+#this function returns the grade of a brown scholar when a name is inputted
+
